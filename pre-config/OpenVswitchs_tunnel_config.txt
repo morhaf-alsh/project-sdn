@@ -1,0 +1,23 @@
+S1:
+/ # ip addr add 110.110.110.1/24 dev eth0
+
+/ # ovs-vsctl add-port br0  tun4  --  set interface  tun4  type=ipsec_gre options:remote_ip=150.150.150.1  options:psk=tunnel4
+/ # ovs-vsctl add-port br0  tun3  --  set interface  tun3   type=ipsec_gre options:remote_ip=140.140.140.1  options:psk=tunnel3
+/ # ovs-vsctl add-port br0  tun2  --  set interface  tun2   type=ipsec_gre  options:remote_ip=130.130.130.1  options:psk=tunnel2
+/ # ovs-vsctl add-port br0  tun1  --  set interface   tun1   type=ipsec_gre  options:remote_ip=120.120.120.1  options:psk=tunnel1
+#####################################################################################################
+S2:
+/ # ip addr add 120.120.120.1/24 dev eth0
+/ # ovs-vsctl add-port br0  tun1  --  set interface  tun1   type=ipsec_gre  options:remote_ip=110.110.110.1  options:psk=tunnel1
+#####################################################################################################
+S3:
+/ # ip addr add 130.130.130.1/24 dev eth0
+/ # ovs-vsctl add-port br0  tun2  --  set interface  tun2   type=ipsec_gre  options:remote_ip=110.110.110.1  options:psk=tunnel2
+#####################################################################################################
+S4:
+/ # ip addr add 140.140.140.1/24 dev eth0
+/ # ovs-vsctl add-port br0  tun3  --  set interface  tun3   type=ipsec_gre  options:remote_ip=110.110.110.1  options:psk=tunnel3
+#####################################################################################################
+S5:
+/ # ip addr add 150.150.150.1/24 dev eth0
+/ # ovs-vsctl add-port br0  tun4  --  set interface  tun4   type=ipsec_gre  options:remote_ip=110.110.110.1  options:psk=tunnel4

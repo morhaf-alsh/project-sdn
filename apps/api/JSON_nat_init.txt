@@ -1,0 +1,6 @@
+{
+"wanPort":1,
+"natPublicIp":"140.150.120.1",
+"defaultGateway":"140.150.120.254",
+"natPrivateNetwork":"192.168.0.0"
+}

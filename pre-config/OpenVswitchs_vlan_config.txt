@@ -1,0 +1,9 @@
+LAN_SW1 :
+/ # ovs-vsctl set port eth1 tag=11
+/ # ovs-vsctl set port eth2 tag=12
+/ # ovs-vsctl set port eth3 tag=13
+/ # ovs-vsctl set port eth4 tag=14
+/ # ovs-vsctl set port eth5 tag=15
+/ # ovs-vsctl set port eth6 tag=16
+/ # ovs-vsctl set port eth7 tag=17
+/ # ovs-vsctl set port eth8 tag=18

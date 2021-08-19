@@ -1,0 +1,67 @@
+S1:
+/ # ovs-vsctl show
+dcdf85d9-4dcd-49a4-8cf3-9c76163d95cd
+    Bridge "br1"
+        Port "br1"
+            Interface "br1"
+                type: internal
+    Bridge "br3"
+        Port "br3"
+            Interface "br3"
+                type: internal
+    Bridge "br0"
+        Port "eth8"
+            Interface "eth8"
+        Port "eth11"
+            Interface "eth11"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth2"
+            Interface "eth2"
+        Port "eth7"
+            Interface "eth7"
+        Port "eth5"
+            Interface "eth5"
+        Port "eth12"
+            Interface "eth12"
+        Port "eth14"
+            Interface "eth14"
+        Port "eth15"
+            Interface "eth15"
+        Port "eth10"
+            Interface "eth10"
+        Port "eth6"
+            Interface "eth6"
+        Port "eth13"
+            Interface "eth13"
+        Port "eth1"
+            Interface "eth1"
+        Port "eth4"
+            Interface "eth4"
+        Port "eth3"
+            Interface "eth3"
+        Port "eth9"
+            Interface "eth9"
+    Bridge "br2"
+        Port "br2"
+            Interface "br2"
+                type: internal
+
+/ # ovs-vsctl   set-controller  br0  tcp:192.168.1.1:6633
+
+S2:
+
+/ # ovs-vsctl   set-controller  br0  tcp:192.168.1.1:6633
+
+S3:
+
+/ # ovs-vsctl   set-controller  br0  tcp:192.168.1.1:6633
+
+S4:
+
+/ # ovs-vsctl   set-controller  br0  tcp:192.168.1.1:6633
+
+S5:
+
+/ # ovs-vsctl   set-controller  br0  tcp:192.168.1.1:6633

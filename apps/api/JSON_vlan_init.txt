@@ -1,0 +1,17 @@
+{
+"1":{
+      "switch_id":9,
+      "vlan_ports":
+                     [
+                      {"number":2,"vlan":[11]},
+                      {"number":3,"vlan":[12]},
+                      {"number":4,"vlan":[13]},
+                      {"number":5,"vlan":[14]},
+                      {"number":6,"vlan":[15]},
+                      {"number":7,"vlan":[16]},
+                      {"number":8,"vlan":[17]},
+                      {"number":9,"vlan":[18]}
+                     ],
+       "trunk_ports":[1]
+}
+}
